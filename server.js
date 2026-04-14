@@ -29,8 +29,10 @@ app.post('/api/chat', async (req, res) => {
 
     const data = await response.json();
     res.json(data);
-  } catch (err) {
-    res.status(500).json({ error: 'Server error' });
+  } } catch (err) {
+    console.error('API Error:', err.message, err.stack);
+    res.status(500).json({ error: 'Server error', details: err.message });
+  } });
   }
 });
 
