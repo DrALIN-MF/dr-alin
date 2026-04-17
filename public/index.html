@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. A.L.I.N. — Medicul tău de familie</title>
+<title>Dr. C.A.L.I.N. — Medicul tău de familie</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -139,9 +139,9 @@
 <body>
 <header>
   <div>
-    <div class="logo-main">Dr. <span>A.L.I.N.</span></div>
+    <div class="logo-main">Dr. <span>C.A.L.I.N.</span></div>
     <div class="logo-sub">Medicul tău de familie</div>
-    <div class="acronym"><span>A</span>rtificial · <span>L</span>ife-care · <span>I</span>ntelligence · <span>N</span>etwork</div>
+    <div class="acronym"><span>C</span>linical · <span>A</span>rtificial · <span>L</span>ife-care · <span>I</span>ntelligence · <span>N</span>etwork</div>
   </div>
   <div class="lang-switch">
     <button class="lang-btn active" onclick="setLang('ro')">RO</button>
@@ -151,7 +151,7 @@
 
 <div class="app">
   <div class="hero">
-    <h1 id="hero-title">Întreabă <em>Dr. A.L.I.N.</em> oricând, oriunde</h1>
+    <h1 id="hero-title">Întreabă <em>Dr. C.A.L.I.N.</em> oricând, oriunde</h1>
     <p id="hero-sub">Asistentul tău medical AI bazat pe medicina de familie.</p>
   </div>
 
@@ -165,7 +165,7 @@
     <div class="chat-header">
       <div style="display:flex;align-items:center">
         <div class="status-dot"></div>
-        <span class="status-label" id="status-lbl">Dr. A.L.I.N. online</span>
+        <span class="status-label" id="status-lbl">Dr. C.A.L.I.N. online</span>
       </div>
       <div class="free-counter" id="free-counter"><span id="q-left">3</span> <span id="q-lbl">întrebări gratuite rămase</span></div>
     </div>
@@ -182,7 +182,7 @@
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <div class="modal-icon">⚕️</div>
-    <h2 id="m-title">Continuă cu Dr. A.L.I.N. Pro</h2>
+    <h2 id="m-title">Continuă cu Dr. C.A.L.I.N. Pro</h2>
     <p id="m-desc">Ai folosit cele 3 întrebări gratuite. Alege un plan Pro pentru răspunsuri mai detaliate, clinice și personalizate.</p>
     <div class="pricing-cards">
       <div class="price-card session-card" onclick="activatePro('session')">
@@ -207,31 +207,31 @@ let history=[];
 
 const T={
   ro:{
-    heroTitle:'Întreabă <em>Dr. A.L.I.N.</em> oricând, oriunde',
+    heroTitle:'Întreabă <em>Dr. C.A.L.I.N.</em> oricând, oriunde',
     heroSub:'Asistentul tău medical AI bazat pe medicina de familie.',
     blFree:'Gratuit · 3 întrebări', blSession:'Pro Sesiune · 20 lei', blPro:'Pro Abonament · 49 lei/lună',
-    statusOn:'Dr. A.L.I.N. online', statusTyping:'Dr. A.L.I.N. scrie...',
+    statusOn:'Dr. C.A.L.I.N. online', statusTyping:'Dr. C.A.L.I.N. scrie...',
     qLbl:'întrebări gratuite rămase', qLblPro:'Pro activ · nelimitat',
     placeholder:'Scrie întrebarea ta medicală...',
-    welcome:'Bună ziua! Sunt Dr. A.L.I.N., asistentul tău medical AI. Îți pot răspunde la întrebări despre sănătate, simptome frecvente sau sfaturi de medicină de familie. Cum te pot ajuta?',
+    welcome:'Bună ziua! Sunt Dr. C.A.L.I.N., asistentul tău medical AI. Îți pot răspunde la întrebări despre sănătate, simptome frecvente sau sfaturi de medicină de familie. Cum te pot ajuta?',
     proOk:'Pro activat! Acum ai acces nelimitat la răspunsuri detaliate.',
     proTag:'PRO',
-    mTitle:'Continuă cu Dr. A.L.I.N. Pro',
+    mTitle:'Continuă cu Dr. C.A.L.I.N. Pro',
     mDesc:'Ai folosit cele 3 întrebări gratuite. Alege un plan Pro pentru răspunsuri mai detaliate, clinice și personalizate.',
     mSl:'Sesiune', mSd:'O conversație completă', mMl:'Abonament', mMd:'Acces nelimitat / lună', mClose:'Nu acum',
     errConn:'Eroare de conexiune. Verifică internetul și încearcă din nou.'
   },
   en:{
-    heroTitle:'Ask <em>Dr. A.L.I.N.</em> anytime, anywhere',
+    heroTitle:'Ask <em>Dr. C.A.L.I.N.</em> anytime, anywhere',
     heroSub:'Your AI-powered family medicine assistant.',
     blFree:'Free · 3 questions', blSession:'Pro Session · 20 RON', blPro:'Pro Monthly · 49 RON/mo',
-    statusOn:'Dr. A.L.I.N. online', statusTyping:'Dr. A.L.I.N. is typing...',
+    statusOn:'Dr. C.A.L.I.N. online', statusTyping:'Dr. C.A.L.I.N. is typing...',
     qLbl:'free questions remaining', qLblPro:'Pro active · unlimited',
     placeholder:'Type your medical question...',
-    welcome:'Hello! I am Dr. A.L.I.N., your AI family medicine assistant. I can answer questions about health, common symptoms and general medical advice. How can I help you today?',
+    welcome:'Hello! I am Dr. C.A.L.I.N., your AI family medicine assistant. I can answer questions about health, common symptoms and general medical advice. How can I help you today?',
     proOk:'Pro activated! You now have unlimited access to detailed answers.',
     proTag:'PRO',
-    mTitle:'Continue with Dr. A.L.I.N. Pro',
+    mTitle:'Continue with Dr. C.A.L.I.N. Pro',
     mDesc:'You have used your 3 free questions. Choose a Pro plan for more detailed, clinical answers.',
     mSl:'Session', mSd:'One full conversation', mMl:'Monthly', mMd:'Unlimited / month', mClose:'Not now',
     errConn:'Connection error. Please check your internet and try again.'
@@ -240,12 +240,12 @@ const T={
 
 const sys={
   free:{
-    ro:'Ești Dr. A.L.I.N. (Artificial Life-care Intelligence Network), un asistent medical AI specializat în medicina de familie. Răspunzi în română. Oferi informații medicale generale, clare și accesibile. Răspunsurile sunt scurte (2-4 propoziții), prietenoase și educative. Nu diagnostichezi. Dacă întrebarea e urgentă, recomandă 112 sau urgențe.',
-    en:'You are Dr. A.L.I.N. (Artificial Life-care Intelligence Network), an AI medical assistant specialized in family medicine. Respond in English. Provide general, clear and accessible medical information. Answers are short (2-4 sentences), friendly and educational. Do not diagnose. For urgent questions, recommend emergency services.'
+    ro:'Ești Dr. C.A.L.I.N. (Clinical Artificial Life-care Intelligence Network), un asistent medical AI specializat în medicina de familie. Răspunzi în română. Oferi informații medicale generale, clare și accesibile. Răspunsurile sunt scurte (2-4 propoziții), prietenoase și educative. Nu diagnostichezi. Dacă întrebarea e urgentă, recomandă 112 sau urgențe.',
+    en:'You are Dr. C.A.L.I.N. (Clinical Artificial Life-care Intelligence Network), an AI medical assistant specialized in family medicine. Respond in English. Provide general, clear and accessible medical information. Answers are short (2-4 sentences), friendly and educational. Do not diagnose. For urgent questions, recommend emergency services.'
   },
   pro:{
-    ro:'Ești Dr. A.L.I.N. Pro (Artificial Life-care Intelligence Network), un asistent medical AI avansat specializat în medicina de familie. Răspunzi în română. Oferi informații medicale detaliate, clinice și personalizate. Poți discuta simptome, medicamente, investigații, valori de laborator și recomandări terapeutice. Răspunsurile sunt structurate și precise. Nu diagnostichezi definitiv. La finalul fiecărui răspuns adaugă: "Notă: răspunsurile Pro sunt mai eficiente, dar nu înlocuiesc o consultație reală. Pentru un diagnostic clar, consultați un medic specialist."',
-    en:'You are Dr. A.L.I.N. Pro (Artificial Life-care Intelligence Network), an advanced AI medical assistant. Respond in English. Provide detailed, clinical and personalized medical information. Discuss symptoms, medications, investigations, lab values and therapeutic recommendations. Answers are structured and precise. Do not definitively diagnose. End each answer with: "Note: Pro answers are more detailed but do not replace a real consultation. For an accurate diagnosis, please consult a specialist."'
+    ro:'Ești Dr. C.A.L.I.N. Pro (Clinical Artificial Life-care Intelligence Network), un asistent medical AI avansat specializat în medicina de familie. Răspunzi în română. Oferi informații medicale detaliate, clinice și personalizate. Poți discuta simptome, medicamente, investigații, valori de laborator și recomandări terapeutice. Răspunsurile sunt structurate și precise. Nu diagnostichezi definitiv. La finalul fiecărui răspuns adaugă: "Notă: răspunsurile Pro sunt mai eficiente, dar nu înlocuiesc o consultație reală. Pentru un diagnostic clar, consultați un medic specialist."',
+    en:'You are Dr. C.A.L.I.N. Pro (Clinical Artificial Life-care Intelligence Network), an advanced AI medical assistant. Respond in English. Provide detailed, clinical and personalized medical information. Discuss symptoms, medications, investigations, lab values and therapeutic recommendations. Answers are structured and precise. Do not definitively diagnose. End each answer with: "Note: Pro answers are more detailed but do not replace a real consultation. For an accurate diagnosis, please consult a specialist."'
   }
 };
 
