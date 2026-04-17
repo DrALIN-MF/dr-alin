@@ -2,16 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const fetch = require('node-fetch');
 const path = require('path');
-
+ 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
-
+ 
 app.post('/api/chat', async (req, res) => {
   try {
     const { messages, system } = req.body;
-
+ 
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -26,19 +26,17 @@ app.post('/api/chat', async (req, res) => {
         messages
       })
     });
-
+ 
     const data = await response.json();
     res.json(data);
-  } } catch (err) {
-    console.error('API Error:', err.message, err.stack);
-    res.status(500).json({ error: 'Server error', details: err.message });
-  } });
+  } catch (err) {
+    res.status(500).json({ error: 'Server error' });
   }
 });
-
+ 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-
+ 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Dr. A.L.I.N. running on port ${PORT}`));
